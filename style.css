@@ -1,5 +1,5 @@
 html, body {
-    background-color: aqua;
+    background-color: skyblue;
     margin: 0;
     padding: 0;
   }
@@ -31,6 +31,7 @@ html, body {
   }
   .main .read-main {
     grid-row: 3/4;
+  
   }
   .main .read-main tr th {
     width: 200px;
@@ -42,5 +43,31 @@ html, body {
   .main .read-main tr td:nth-child(4) {
     display: grid;
     grid-auto-flow: column;
+    padding-top: 30px;
+    padding: 20px 80px;
+    
+  
   }
+ /* .form_edit{
+  border: 2px solid;
+  padding: 10px;
+  margin-top: 10px;
+
+ } */
+ input[type="submit"] {
+  border: 3px solid;
+  background-color: green;
+  color: white;
+
+ }
+ td {
+  
+  width: 50px;
+  border: 2px solid;
  
+ }
+input:hover {
+  background-color: black;
+  color: white;
+  
+}
