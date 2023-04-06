@@ -9,7 +9,7 @@
 
     # Establishing database connection
     $connection = mysqli_connect($host, $user, $password, $database);
-
+    #incase with port -> $connection = mysqli_connect($host, $user, $password, $database, $port);
 
     # checking database connection (make sure the name of $database is correct)
     if(mysqli_connect_error()) {
@@ -18,10 +18,10 @@
       
 
     }
-    else {
-        echo "<script> alert ('successfully connected!'); </script>";
-        echo "<script> alert ('connected...'); </script>";
-    }
+    // else {
+    //     echo "<script> alert ('successfully connected!'); </script>";
+    //     echo "<script> alert ('connected...'); </script>";
+    // }
 
 
 
