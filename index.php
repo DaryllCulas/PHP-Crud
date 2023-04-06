@@ -32,11 +32,11 @@
 
     <!-------Attributes----->
     <tr>
-        <th>ID</th>
-        <th>USERNAME</th>
-        <th>AGE</th>
-        <th>GENDER</th>
-        <th>PASSWORD</th>
+        <th><a href="?column=id&sort = <?php echo $sort ?>"> ID </a></th>
+        <th><a href="?column=username&sort = <?php echo $sort ?>"> USERNAME </a></th>
+        <th><a href="?column=age&sort = <?php echo $sort ?>"> AGE</a> </th>
+        <th><a href="?column=gender&sort = <?php echo $sort ?>"> GENDER </a></th>
+        <th><a href="?column=password&sort = <?php echo $sort ?>"> PASSWORD </a></th>
         <th>ACTIONS</th>
     </tr>
 
@@ -52,15 +52,23 @@
 
     <!-- This is for actionHandling form --->
         <td>
-            <form action="#" method="get">
+            <form action="./update.php" method="post">
                 <input type="submit" name ="edit" value="EDIT">
+                <input type="hidden" name = "editId" value=" <?php echo $results['id'] ?>" >
+                <input type="hidden" name = "editUsername" value=" <?php echo $results['username'] ?>" >
+                <input type="hidden" name = "editAge" value=" <?php echo $results['age'] ?>" >
+                <input type="hidden" name = "editGender" value=" <?php echo $results['gender'] ?>" >
+                <input type="hidden" name = "editPassword" value=" <?php echo $results['password'] ?>" >
             </form>
-
-             <form action="#" method="get">
+        
+             <form action="./delete.php" method="post">
                 <input type="submit" name = "delete" value="DELETE">
+                <input type="hidden" name = "deleteId" value=" <?php echo $results['id'] ?>" >
             </form>
         </td>
     </tr>
+
+
     <?php }  ?>
   
 

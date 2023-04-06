@@ -18,7 +18,7 @@ if(isset($_POST['create_acct'])) {
          echo '<script> alert ("Successfully Created!"); </script>';
     
          # This is for redirecting another file (going to index.php) using JScript
-        echo '<script> window.location.href = "./index.php"</script>';
+        echo '<script> window.location.href = "./index.php" </script>';
 }
 else {
         echo '<script> window.location.href = "./index.php"</script>';
