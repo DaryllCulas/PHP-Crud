@@ -31,12 +31,14 @@
 <table class = "read-main">
 
     <!-------Attributes----->
+    <!---- Minor Bug: Unable to sort its data---->
+    <!-- Remember: putting parameters in href tags must avoid its whitespace when applying $_GET superglobal---->
     <tr>
-        <th><a href="?column=id&sort = <?php echo $sort ?>"> ID </a></th>
-        <th><a href="?column=username&sort = <?php echo $sort ?>"> USERNAME </a></th>
-        <th><a href="?column=age&sort = <?php echo $sort ?>"> AGE</a> </th>
-        <th><a href="?column=gender&sort = <?php echo $sort ?>"> GENDER </a></th>
-        <th><a href="?column=password&sort = <?php echo $sort ?>"> PASSWORD </a></th>
+        <th><a href= "?column=id&sort=<?php echo $sort ?>"> ID </a></th>
+        <th><a href= "?column=username&sort=<?php echo $sort ?>"> USERNAME </a></th>
+        <th><a href= "?column=age&sort=<?php echo $sort ?>" > AGE </a> </th>
+        <th><a href= "?column=gender&sort=<?php echo $sort ?>"> GENDER </a></th>
+        <th><a href= "?column=password&sort=<?php echo $sort ?>"> PASSWORD </a></th>
         <th>ACTIONS</th>
     </tr>
 
@@ -61,6 +63,8 @@
                 <input type="hidden" name = "editPassword" value=" <?php echo $results['password'] ?>" >
             </form>
         
+
+
              <form action="./delete.php" method="post">
                 <input type="submit" name = "delete" value="DELETE">
                 <input type="hidden" name = "deleteId" value=" <?php echo $results['id'] ?>" >
