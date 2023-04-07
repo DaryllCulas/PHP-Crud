@@ -76,6 +76,7 @@ html, body {
 
         <!-- In this form, the method must be noticed as we can use post superglobal--->
         <!---This form is called UPDATE PROCESS---->
+        <!-- from index when we press the edit button, we're redirect to update.php and you can see the 4 textfields and an update button--->
         <form class ="update-main" action="./update.php" method="post"> <!-- <- Let's see the action being accessed by create.php-->
             <h3> UPDATE USER </h3>
             <!-- In this section, we're gonna make four textfields to edit its information-->
