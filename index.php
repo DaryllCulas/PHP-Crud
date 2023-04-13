@@ -18,21 +18,23 @@
 
         <!-- In this form, the method must be noticed as we can use post superglobal--->
         <!---This form is called CREATE PROCESS---->
-        <form class ="create-main" action="./create.php" method="post"> <!-- <- Let's see the action being accessed by create.php-->
+        <form class ="create-main" action="./create.php" method="post"> 
+            <!-- <- Let's see the action being accessed by create.php-->
             <h3> CREATE USER </h3>
                 <input type="text" name="username" placeholder ="Enter your name" required/>
                 <input type="text" name="age" placeholder ="Enter your age" required/>
                 <input type="text" name="gender" placeholder ="Enter your gender" required/>
-                <input type="text" name="password" placeholder ="Enter your password" required/>
-                <input type="submit" name = "create_acct" value="Create">
-                
+                <input type="text " name="password" placeholder ="Enter your password" required/>
+                <input type="submit" name = "create_acct" value="Create">     
         </form>
+
+        
     
 <table class = "read-main">
 
     <!-------Attributes----->
     <!---- Minor Bug: Unable to sort its data---->
-    <!-- Remember: putting parameters in href tags must avoid its whitespace when applying $_GET superglobal---->
+    <!-- Remember: putting URL's query strings in href tags must avoid its whitespace when applying $_GET superglobal---->
     <tr>
         <th><a href= "?column=id&sort=<?php echo $sort ?>"> ID </a></th>
         <th><a href= "?column=username&sort=<?php echo $sort ?>"> USERNAME </a></th>
@@ -44,6 +46,7 @@
 
     <!--- FETCHING VALUES THROUGH LOOPING SINCE WE ARE ALREADY ACCESSED THE read.php ---> 
     <!-- Tuples(Rows)--->
+    <!-- We're fetching the data from $sqlAccounts(read.php)-->
     <?php while($results = mysqli_fetch_array($sqlAccounts)) {    ?>
     <tr>
         <td><?php echo $results['id'] ?> </td>
@@ -53,6 +56,8 @@
         <td><?php echo $results['password'] ?></td>
 
     <!-- This is for actionHandling form --->
+
+    <!--- This form is called UPDATE Process--->
         <td>
             <form action="./update.php" method="post">
                 <input type="submit" name ="edit" value="EDIT">
@@ -64,7 +69,7 @@
             </form>
         
 
-
+        <!--- This is form is called DELETE Process--->
              <form action="./delete.php" method="post">
                 <input type="submit" name = "delete" value="DELETE">
                 <input type="hidden" name = "deleteId" value=" <?php echo $results['id'] ?>" >

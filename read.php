@@ -3,9 +3,6 @@
 
     $sort = "DESC";
     $column = "id";
-
-   
-
 if (isset($_GET['column']) && isset($_GET['sort'])) {
     $column = $_GET['column'];
     $sort = $_GET['sort'];
@@ -15,8 +12,9 @@ if (isset($_GET['column']) && isset($_GET['sort'])) {
 }
 
 
+
     $queryAccounts = "SELECT * FROM accounts ORDER BY $column $sort"; # Query of Table in Database
-    $sqlAccounts = mysqli_query($connection, $queryAccounts); # Combination of connection of database and query
+    $sqlAccounts = mysqli_query($connection, $queryAccounts); # Combination of connection of database's table and query
 
 
  ?>
