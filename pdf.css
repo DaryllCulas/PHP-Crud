@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.account_Table {
+    margin-top: 50px;
+    width: 100%;
+}
+.account_Table tr th {
+    border: 1px solid black;
+}
+.account_Table tr td {
+    text-align: center;
+}
+.row-accounts {
+    border: 2px solid black;
+}
