@@ -28,8 +28,14 @@
                 <input type="submit" name = "create_acct" value="Create">     
         </form>
 
+
+<!--- PDF CLICK EXPORTED -->
+<form class ="export_main" action="./pdf.php" method="post">
+    <input type="submit" name ="Export_PDF" value="EXPORT PDF">
+</form>
         
     
+
 <table class = "read-main">
 
     <!-------Attributes----->
@@ -76,8 +82,6 @@
             </form>
         </td>
     </tr>
-
-
     <?php }  ?>
   
 
